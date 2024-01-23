@@ -79,22 +79,14 @@ public class Main{
         }catch(Exception e){
           e.printStackTrace();
         }
-
-
-
-
-
-
-      
-      
-        JFrame jFrame = new JFrame("Task Manager");
+        JFrame jFrame = new JFrame("Shane's Task Manager");
         jFrame.setLayout(new BorderLayout());
         jFrame.setSize(550, 400);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel(new BorderLayout());
-        JLabel label = new JLabel("Task Manager");
-        Border border = BorderFactory.createLineBorder(Color.BLACK);
+        JLabel label = new JLabel("Shane's Task Manager");
+        Border border = BorderFactory.createLineBorder(Color.BLUE);
         label.setBorder(border);
         label.setPreferredSize(new Dimension(150, 50));
         label.setHorizontalAlignment(JLabel.CENTER);
@@ -109,8 +101,8 @@ public class Main{
 
         JTextField taskNameField = new JTextField(15);
         JTextField dateField = new JTextField(10);
-        JButton addButton = new JButton("Add Task");
-        JButton deleteButton = new JButton("Delete Task");
+        JButton addButton = new JButton("Add");
+        JButton deleteButton = new JButton("Delete");
 
         addButton.addActionListener(new ActionListener() {
 
@@ -157,9 +149,9 @@ public class Main{
         deleteButton.addActionListener(closeButtonAction);
        
 
-        inputPanel.add(new JLabel("Task Name: "));
+        inputPanel.add(new JLabel("Name: "));
         inputPanel.add(taskNameField);
-        inputPanel.add(new JLabel("Due Date (yyyy-MM-dd): "));
+        inputPanel.add(new JLabel("Date (yyyy-MM-dd): "));
         inputPanel.add(dateField);
         inputPanel.add(addButton);
         inputPanel.add(deleteButton);
